@@ -1,3 +1,4 @@
+
 ### Graph
 1. 개념
 - 유한한 노드의 집합
@@ -6,7 +7,7 @@
 - edge 는 weight/value/cost 를 가질 수 있다.
 
 2. 그래프 분류 방법
-2.1. Direction
+2.1. Direction <br/>
 ![](https://www.geeksforgeeks.org/wp-content/uploads/Tree_overview_of_data_structures_1.jpg)
 * Undirected Graph : 모든 edge가 양방향
 * Directed Graph : 모든 edge 가 단방향
@@ -52,7 +53,7 @@ M은 문자열의 길이, N은 trie 내에 있는 키의 개수 (예: 알파벳 
 
 ### Segment Tree
 
-1. 개념
+1. 개념 <br/>
 ![](https://www.geeksforgeeks.org/wp-content/uploads/Tree_overview_of_data_structures_4.jpg)
 * 값의 특정 집합에 대해 많은 쿼리를 수행할 때
 * 쿼리라 함은, 최소값, 최대값, 합계 등 주어진 집합의 인풋 범위 내에서 이루어진 모든 것을 의미한다. 집합 내에 새 요소를 추가하는 것도 포함된다.
@@ -72,7 +73,7 @@ Update : O(log N)
 
 ### Suffix Tree
 
-1. 개념
+1. 개념 <br/>
 ![](https://www.geeksforgeeks.org/wp-content/uploads/Tree_overview_of_data_structures_5.jpg)
 * 텍스트 내에서 특정 패턴을 검색할 때 주로 사용됨.
 * 검색 작동이 패턴의 길이에만 정비례 하도록 텍스트를 선처리 하는 것.

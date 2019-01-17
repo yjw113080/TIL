@@ -11,8 +11,9 @@
 3. 이진 트리의 속성
 * x 층에 존재할 수 있는 최대의 노드 개수: 2^(x-1).
 * 전체 이진 트리에 존재할 수 있는 최대의 노드 개수: 2^h – 1.
-* Minimum possible height =  ceil(Log2(n+1))
-* In Binary tree, number of leaf nodes is always one more than nodes with two children.
+* Minimum possible height =  (Log2(n+1))의 올림값<br/>
+  O(log(n))의 의미: 초반엔 급격히 상승하지만 개수 (n) 이 많아질 수록 증가 폭이 줄어든다
+* 이진 트리에서 left node(자식이 없는 노드) 개수는 항상 자식을 둘 가진 node 개수 보다 1 많다.
 * Time Complexity of Tree Traversal: O(n)
 
 4. 트리/이진트리를 사용하는 예시
@@ -32,9 +33,9 @@
 * Insertion : O(h)
 * Deletion : O(h)
 * Extra Space : O(n) for pointers
-* If Binary Search Tree is Height Balanced, then h = O(Log n) 
-* Self-Balancing BSTs such as AVL Tree, Red-Black Tree and Splay Tree make sure that height of BST  remains O(Log n)
-
+* 왼쪽 하위 트리와 오른쪽 하위 트리의 높이 차이가 1 을 넘지 않는 Tree를 Height Balanced Tree 라고 하는데, Height balanced 되었을 경우 h = O(Log n) 
+* Self-Balancing 트리: Node를 삽입/삭제할 때 Height balanced 상태를 자동으로 유지(높이를 가능한한 작게)해주는 Tree를 말하고, 
+구현 방법으로는 AVL, 레드 블랙 트리 같은 게 있습니다. 일반 BST는 Worst case(한 노드에 하나의 노드만 달려있음)의 경우에 O(n) 으로 시간 복잡도가 높아지지만, 자가 균형 BST의 경우  O(Log n) 으로 복잡도를 줄일 수 있다.
 3. 이진검색트리 사용 예시
 * 값 접근/검색은 LinkedList 보다는 빠르고 Array 보다 느리다.
 * 값 삽입/삭제는 Array 보다는 빠르고 LinkedList 보다 느리다.
@@ -45,7 +46,7 @@
 ### Binary Heap
 1. 이진 힙 개념
 * 이진트리 기준으로 몇 가지 추가적인 속성이 더해짐.
-1) 완전 트리. 가장 마지막 층 빼고 각 층이 모두 채워져있음. the last level has all keys as left as possible.
+1) 완전 트리. 가장 마지막 층 빼고 각 층이 모두 채워져있음. 마지막 레벨에 있는 모든 child node들은 가능한한 왼쪽 (노드) 에 위치해야 함.
 2) Min Heap이거나 Max Heap이다. Min Binary Heap의 경우, 루트의 키는 전체 트리의 키 중 제일 작다. Max Heap은 그 반대의 경우.
 
 2. 이진 힙 속성
@@ -66,7 +67,9 @@
 * 좋은 Hash Function 은 1) 계산이 효율적이고(Efficiently Computable) 2) 균일하게 키를 배분한다.
 * Hash Table: 주어진 정보를 가리키는 포인터를 담는 배열. 
 * Collision Handling: bigint나 string 이 Hash Function을 통해 int로 변형되는 과정에서 같은 값으로 잘못 변형될 수도 있다. 이건 절대 발생해서는 안되는 케이스이기 때문에 만약 발생했다면 이를 적절히 해결해야 한다.
-* 이걸 해결하기 위한 방법으로는 1) Chaining, 2) Open Addressing이 있다. Chaining 은 해시 테이블 포인터의 각 셀이, 같은 Hash Function 값을 갖는 레코드의 linked list를 가리키도록 하는 것이다. 
+
+![](https://files.slack.com/files-pri/T9Y35UY03-FFG27F4SF/hash-table-chaining-1.png)<br/>
+* 이걸 해결하기 위한 방법으로는 1) Chaining, 2) Open Addressing이 있다. Chaining 은 동일한 키가 있는 경우 기존 데이터의 linked list 뒤에 새로운 데이터를 삽입하는 방식으로 충돌을 해결.
 Open Addressing 은 모든 요소가 해시 테이블에 저장된다. 각 테이블 내용값은 레코드를 갖거나 NIL 값을 갖는다. 요소를 검색할 때 원하는 값이 나올 때까지 테이블 칸을 하나하나 뒤진다. 
 
 2. Hashing의 속성
@@ -81,14 +84,3 @@ Open Addressing 은 모든 요소가 해시 테이블에 저장된다. 각 테�
 * 브라우저에서 방문 기록이 hashing을 이용한다.
 * 방화벽에서 스팸을 걸러낼 때, IP 주소를 hash할 때에도 사용함.
 
-
-
-Representation 을 정확히 번역한다면?
-ceil..?
-15번 줄 무슨 소리..?
-O(log n) 은 반비례한다는 뜻인가?
-Height balanced 가 무슨 뜻임? 높이가 동일하다고..?
-Self-Balancing..? 36번줄 먼소리..?
-48번 줄 영어 뭔소리..?
-이진힙 속성에서 Get이랑 Extract의 차이?
-69번 줄 Chaining 무슨 소리..?
