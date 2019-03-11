@@ -7,7 +7,7 @@
 - edge 는 weight/value/cost 를 가질 수 있다.
 
 2. 그래프 분류 방법
-2.1. Direction <br/>
+2.1. Direction <br/><br/>
 ![](https://www.geeksforgeeks.org/wp-content/uploads/Tree_overview_of_data_structures_1.jpg)
 * Undirected Graph : 모든 edge가 양방향
 * Directed Graph : 모든 edge 가 단방향
@@ -17,7 +17,7 @@
 * Weighted Graph : 각 edge에 대한 frequency (==weight)가 표기됨. 
 * Unweighted Graph : 표기되지 않음.
 
-3. Time Complexity
+3. Time Complexity <br/>
 3.1. 인접 Matrix :
 * Traversal :(By BFS or DFS) O(V^2)
 * Space : O(V^2)
@@ -26,8 +26,8 @@
 * Traversal :(By BFS or DFS) O(ElogV)
 * Space : O(V+E)
 
-4. 사용 예시
-네트워크 상에서 가장 근접한 경로를 검색해야 할 때. 구글 맵 등.
+4. 사용 예시<br/>
+네트워크 상에서 가장 근접한 경로를 검색해야 할 때. 구글 맵 등.<br/>
 SNS 에서 친구 추천 알고리즘. 
 
 

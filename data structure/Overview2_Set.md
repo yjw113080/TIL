@@ -36,6 +36,8 @@
 * 왼쪽 하위 트리와 오른쪽 하위 트리의 높이 차이가 1 을 넘지 않는 Tree를 Height Balanced Tree 라고 하는데, Height balanced 되었을 경우 h = O(Log n) 
 * Self-Balancing 트리: Node를 삽입/삭제할 때 Height balanced 상태를 자동으로 유지(높이를 가능한한 작게)해주는 Tree를 말하고, 
 구현 방법으로는 AVL, 레드 블랙 트리 같은 게 있습니다. 일반 BST는 Worst case(한 노드에 하나의 노드만 달려있음)의 경우에 O(n) 으로 시간 복잡도가 높아지지만, 자가 균형 BST의 경우  O(Log n) 으로 복잡도를 줄일 수 있다.
+
+
 3. 이진검색트리 사용 예시
 * 값 접근/검색은 LinkedList 보다는 빠르고 Array 보다 느리다.
 * 값 삽입/삭제는 Array 보다는 빠르고 LinkedList 보다 느리다.
